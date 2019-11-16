@@ -5,48 +5,21 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-float soma (float a, float b)
-{
-	
-	return a + b;
-	
-	
-	
-	
+float soma (float a, float b){	
+	return a + b;	
 }
 
 
-float subtracao (float a, float b)
-{
-	
-	return a - b;
-	
-	
-	
-	
+float subtracao (float a, float b){	
+	return a - b;	
 }
 
-float vezes (float a, float b)
-{
-	
+float vezes (float a, float b){	
 	return a * b;
-	
-	
-	
-	
 }
 
-
-
-
-float divisao (float a, float b)
-{
-	
+float divisao (float a, float b){	
 	return a / b;
-	
-	
-	
-	
 }
 
 
@@ -57,7 +30,6 @@ setlocale(LC_ALL, "Portuguese");
 char condicao,condicao2;
 int condicao3;
 
-
 float valor1, valor2,valor3, operador, resultado,resultado2,resultado3;
 
 printf("Digite o primeiro valor:\n");
@@ -66,10 +38,10 @@ scanf("%f",&valor1);
 system("cls");
 
 printf("####Operador####\n");
-printf("+|AdiÁ„o|\t\n");
-printf("-|subtraÁ„o|\n");
-printf("*|multiplicaÁ„o|\n");
-printf("/|divis„o|\n");
+printf("+|Adi√ß√£o|\t\n");
+printf("-|subtra√ß√£o|\n");
+printf("*|multiplica√ß√£o|\n");
+printf("/|divis√£o|\n");
 printf("=|resultado\n");
 printf("____________________________________________________________\n");
 
@@ -80,15 +52,8 @@ printf("Operador: ");
 condicao=getchar();
 condicao=getchar();
 
-
-
-
 switch (condicao){
 case '+':
-		
-		
-
-
 		printf("valor:\t");
 		scanf("%f",&valor2);
 
@@ -115,22 +80,8 @@ case '+':
 		scanf("%f",&valor2);
 		
 		resultado = vezes(valor1, valor2);
-	
-	
-	
-	
-	
-	
-	
-	
-	
 		break;
 	case '/':
-		
-		
-		
-
-
 		printf("valor:\t");
 		//printf("Digite o segundo valor:\n");
 		scanf("%f",&valor2);
@@ -143,90 +94,84 @@ case '+':
 		}
 		else{
 			
-			printf("impossÌvel dividir por 0");
+			printf("imposs√≠vel dividir por 0");
 			
 		}
 		break;
 
 	default:
 	
-	printf("erro\n");	
-	
-
+	printf("erro\n");
 }
 
 
 	
-while (condicao3 != 2)
-{
+while (condicao3 != 2){
 
-printf("Operador:");
-condicao2=getchar();
-condicao2=getchar();
-//scanf("%s", condicao2);
+	printf("Operador:");
+	condicao2=getchar();
+	condicao2=getchar();
+	//scanf("%s", condicao2);
 
 
-switch (condicao2){
-	case '+':
-		printf("valor:\t");
-		scanf("%f",&valor3);
-		resultado2 = soma(resultado,valor3);
-	    //printf("=%f\n",resultado2);
-	    resultado=resultado2;
-		
-	
-		break;
-	case '-':
-	    printf("valor:\t");
-		scanf("%f",&valor3);
-		resultado2 = subtracao(resultado,valor3);
-		//printf("=%f\n",resultado2);
-	 	resultado=resultado2;
-		
-		break;
-	case '*':
-		printf("valor:\t");
-		scanf("%f",&valor3);
-		resultado2 = vezes(resultado,valor3);
-		//printf("=%f\n",resultado2);
-		resultado=resultado2;
-		
-		break;
-	case '/':
-		printf("valor:\t");
-		scanf("%f",&valor3);
-		
-		if(valor3 !=0)
-		{
-		resultado2 = divisao(resultado,valor3);
-		resultado=resultado2;
-		
-	
-		}
-		else{
-			
-			printf("impossÌvel dividir por 0\n\n");
-			
-		}
-		
-		break;
-	case '=':
-			
-			
-			printf("___________\n%f\n\n",resultado);
-			condicao3 = 2;
-	
-		break;
-	
-	default:
-	
-	printf("erro\n");	
-		
+	switch (condicao2){
+		case '+':
+			printf("valor:\t");
+			scanf("%f",&valor3);
+			resultado2 = soma(resultado,valor3);
+		    //printf("=%f\n",resultado2);
+		    resultado=resultado2;
+
+
+			break;
+		case '-':
+		    printf("valor:\t");
+			scanf("%f",&valor3);
+			resultado2 = subtracao(resultado,valor3);
+			//printf("=%f\n",resultado2);
+			resultado=resultado2;
+
+			break;
+		case '*':
+			printf("valor:\t");
+			scanf("%f",&valor3);
+			resultado2 = vezes(resultado,valor3);
+			//printf("=%f\n",resultado2);
+			resultado=resultado2;
+
+			break;
+		case '/':
+			printf("valor:\t");
+			scanf("%f",&valor3);
+
+			if(valor3 !=0)
+			{
+			resultado2 = divisao(resultado,valor3);
+			resultado=resultado2;
+
+
+			}
+			else{
+
+				printf("imposs√≠vel dividir por 0\n\n");
+
+			}
+
+			break;
+		case '=':
+
+
+				printf("___________\n%f\n\n",resultado);
+				condicao3 = 2;
+
+			break;
+
+		default:
+
+		printf("erro\n");
 
 	}
-	
 
 }
-
 	return 0;
 }
